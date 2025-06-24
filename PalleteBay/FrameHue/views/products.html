@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/css/allproducts.css">
+    <title>PalleteBay | Gallery</title>
+</head>
+    <header>
+        <h1>PalleteBay</h1>
+        <div class="search-container">
+            <input type="text" placeholder="Search paintings...">
+            <button class="search-btn">
+                <svg class="search-icon" viewBox="0 0 24 24">
+                    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                </svg>
+            </button>
+        </div>
+        <nav>
+            <a id="loginBtn" href="login.html">Login / Signup</a>
+            <a id="logoutBtn" href="/logout" style="display: none;">Logout</a>
+            <a href="index.html">Home</a>
+            <a href="/yourorders.html" id="ordersLink">Your Orders</a>
+            <a href="cart.html">🛒 Cart</a>
+        </nav>
+    </header>
+    <h1>Explore Our Painting Gallery</h1>
+    <div class="gallery">
+        <div class="card">
+            <div class="img-wrapper">
+                <img src="./images/painting7.png" alt="Painting 1">
+            </div>
+            <h3>The Amazon Forest</h3>
+            <p>₹1,299</p>
+            <div class="button-container">
+                <a href="/product7.html" class="btn view-btn">View</a>
+                <button class="cart-btn" 
+                id="cart-button-painting7"
+                data-id="painting7"
+                data-name="The Amazon Forest"
+                data-price="1299"
+                data-image="./images/painting7.png"
+                onclick="addToCart('painting7', 'The Amazon Forest', 1299, './images/painting7.png')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-wrapper">
+                <img src="./images/painting8.png" alt="Painting 2">
+            </div>
+            <h3>Sunrise</h3>
+            <p>₹1,599</p>
+            <div class="button-container">
+                <a href="/product8.html" class="btn view-btn">View</a>
+                <button class="cart-btn" 
+                id="cart-button-painting8"
+                data-id="painting8"
+                data-name="Sunrise"
+                data-price="1599"
+                data-image="./images/painting8.png" 
+                onclick="addToCart('painting8', 'Sunrise', 1599, './images/painting8.png')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-wrapper">
+                <img src="./images/painting9.png" alt="Painting 3">
+            </div>
+            <h3>Fire Glow</h3>
+            <p>₹1,399</p>
+            <div class="button-container">
+                <a href="/product9.html" class="btn view-btn">View</a>
+                <button class="cart-btn"  
+                id="cart-button-painting9"
+                data-id="painting9"
+                data-name="Fire Glow"
+                data-price="1399"
+                data-image="./images/painting9.png"
+                onclick="addToCart('painting9', 'Fire Glow', 1399, './images/painting9.png')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-wrapper">
+                <img src="./images/painting10.png" alt="Painting 4">
+            </div>
+            <h3>The Boat Man</h3>
+            <p>₹1,499</p>
+            <div class="button-container">
+                <a href="/product10.html" class="btn view-btn">View</a>
+                <button class="cart-btn" 
+                id="cart-button-painting10"
+                data-id="painting10"
+                data-name="The Boat Man"
+                data-price="1499"
+                data-image="./images/painting10.png"
+                onclick="addToCart('painting10', 'The Boat Man', 1499, './images/painting10.png')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-wrapper">
+                <img src="./images/painting11.png" alt="Painting 5">
+            </div>
+            <h3>New York City</h3>
+            <p>₹1,299</p>
+            <div class="button-container">
+                <a href="/product11.html" class="btn view-btn">View</a>
+                <button class="cart-btn"  
+                id="cart-button-painting11"
+                data-id="painting11"
+                data-name="New York City"
+                data-price="1299"
+                data-image="./images/painting11.png"
+                onclick="addToCart('painting11', 'New York City', 1299, './images/painting11.png')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-wrapper">
+                <img src="./images/painting14.png" alt="Painting 6">
+            </div>
+            <h3>Ocean Breeze</h3>
+            <p>₹1,399</p>
+            <div class="button-container">
+                <a href="/product12.html" class="btn view-btn">View</a>
+                <button class="cart-btn" 
+                id="cart-button-painting12"
+                data-id="painting12"
+                data-name="Ocean Breeze"
+                data-price="1399"
+                data-image="./images/painting14.png"
+                onclick="addToCart('painting12', 'Ocean Breeze', 1399, './images/painting14.png')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-wrapper">
+                <img src="./images/painting12.png" alt="Painting 7">
+            </div>
+            <h3>Amber Horizon</h3>
+            <p>₹1,599</p>
+            <div class="button-container">
+                <a href="/product13.html" class="btn view-btn">View</a>
+                <button class="cart-btn" 
+                id="cart-button-painting13"
+                data-id="painting13"
+                data-name="Amber Horizon"
+                data-price="1599"
+                data-image="./images/painting12.png" 
+                onclick="addToCart('painting13', 'Amber Horizon', 1599, './images/painting12.png')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-wrapper">
+                <img src="./images/painting19.png" alt="Painting 8">
+            </div>
+            <h3>French People</h3>
+            <p>₹1,499</p>
+            <div class="button-container">
+                <a href="/product14.html" class="btn view-btn">View</a>
+                <button class="cart-btn"
+                id="cart-button-painting14"
+                data-id="painting14"
+                data-name="French People"
+                data-price="1499"
+                data-image="./images/painting19.png"
+                onclick="addToCart('painting14', 'French People', 1499, './images/painting19.png')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-wrapper">
+                <img src="./images/painting18.png" alt="Painting 9">
+            </div>
+            <h3>Sun Kissed</h3>
+            <p>₹1,399</p>
+            <div class="button-container">
+                <a href="/product15.html" class="btn view-btn">View</a>
+                <button class="cart-btn" 
+                id="cart-button-painting15"
+                data-id="painting15"
+                data-name="Sun Kissed"
+                data-price="1399"
+                data-image="./images/painting18.png"
+                onclick="addToCart('painting15', 'Sun Kissed', 1399, './images/painting18.png')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-wrapper">
+                <img src="./images/painting15.png" alt="Painting 10">
+            </div>
+            <h3>Red Mirage</h3>
+            <p>₹1,299</p>
+            <div class="button-container">
+                <a href="/product16.html" class="btn view-btn">View</a>
+                <button class="cart-btn" 
+                id="cart-button-painting16"
+                data-id="painting16"
+                data-name="Red Mirage"
+                data-price="1299"
+                data-image="./images/painting15.png"
+                onclick="addToCart('painting16', 'Red Mirage', 1299, './images/painting15.png')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-wrapper">
+                <img src="./images/painting17.png" alt="Painting 11">
+            </div>
+            <h3>Festival of Colors</h3>
+            <p>₹1,599</p>
+            <div class="button-container">
+                <a href="/product17.html" class="btn view-btn">View</a>
+                <button class="cart-btn" 
+                id="cart-button-painting17"
+                data-id="painting17"
+                data-name="Festival of Colors"
+                data-price="1599"
+                data-image="./images/painting17.png"
+                onclick="addToCart('painting17', 'Festival of Colors', 1599, './images/painting17.png')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-wrapper">
+                <img src="./images/painting16.png" alt="Painting 12">
+            </div>
+            <h3>Moon Over Kyoto</h3>
+            <p>₹1,399</p>
+            <div class="button-container">
+                <a href="/product18.html" class="btn view-btn">View</a>
+                <button class="cart-btn" 
+                id="cart-button-painting18"
+                data-id="painting18"
+                data-name="Moon Over Kyoto"
+                data-price="1399"
+                data-image="./images/painting16.png"
+                onclick="addToCart('painting18', 'Moon Over Kyoto', 1399, './images/painting16.png')">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</section>
+  
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Contact Us</h3>
+      <p>301, Creative Heights, Road No. 36,Jubilee Hills, Hyderabad, Telangana - 500033</p>
+      <p>Contact No: +91 8822 866 866</p>
+      <p>WhatsApp: +919284528293</p>
+      <p>GSTIN (Tax ID): 27AACCF4436A1Z3</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Navigate</h3>
+      <a href="#">Large Paintings for Living Room</a>
+      <a href="#">Additional Information</a>
+      <a href="#">Art Categories</a>
+      <a href="#">Living Room Paintings</a>
+      <a href="#">Paintings</a>
+      <a href="#">Blog</a>
+      <a href="#">Sitemap</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Information</h3>
+      <a href="#">About Us</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Grievance Officer</a>
+      <a href="#">Manufacturer/Packager/Importer</a>
+      <a href="#">Warranty & Guarantee</a>
+      <a href="#">Installation</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Customer</h3>
+      <a href="#">Create an Account</a>
+      <a href="#">Your Cart</a>
+      <a href="#">Returns & Cancellation Policy</a>
+      <a href="#">Shipping & Packaging</a>
+      <a href="#">Bulk / Corporate Orders</a>
+      <a href="#">Payment Options</a>
+      <a href="#">FAQ</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Artist/Dealer</h3>
+      <a href="#">How to sell on PalleteBay</a>
+      <a href="#">Login to your account</a>
+      <a href="#">Become a Seller</a>
+    </div>
+  </div>
+</body>
+</footer>
+<footer>
+  <p class="copyright-text" style="text-align: center; padding: 20px 0; margin: 0;">&copy; 2025 PalleteBay. All rights reserved.</p>
+</footer>
+</section>
+<!-- Move the scroll-to-top link inside body -->
+<a href="#" class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">↑</a>
+<script src="/js/cartfunctions.js"></script>
+<script src="/js/cart.js"></script>
+<script src="/js/allproducts.js"></script>
+</body>
+</html>

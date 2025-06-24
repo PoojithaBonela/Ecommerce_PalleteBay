@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="/css/home.css" />
+  <title>PalleteBay | Home</title>
+</head>
+  <body>
+    <a href="#" class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">↑</a>
+  <header>
+    <h1>PalleteBay</h1>
+    <div class="search-container">
+      <input type="text" placeholder="Search paintings...">
+      <button class="search-btn">
+        <svg class="search-icon" viewBox="0 0 24 24">
+          <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+        </svg>
+      </button>
+    </div>
+    <nav>
+        <a id="loginBtn" href="login.html">Login / Signup</a>
+        <a id="logoutBtn" href="/logout" style="display: none;">Logout</a>
+        <a href="products.html">Gallery</a>
+        <a href="/yourorders.html" id="ordersLink">Your Orders</a>
+        <a href="cart.html">🛒 Cart</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="./images/bigpainting.jpg" alt="Gallery Background">
+      <h2>Gallery of Exclusive Paintings</h2>
+      <p>Explore handcrafted artwork from passionate creators.</p>
+    </section>
+
+    <h2>Featured Paintings</h2>
+    <section id="featured-products">
+      <div class="product-card">
+        <div class="img-wrapper">
+          <img src="./images/painting1.png" alt="Painting 1" />
+        </div>
+        <h3>Tranquil Forest</h3>
+        <p>₹1,299</p>
+        <div class="button-container">
+          <a href="/product1.html" class="view-btn">View</a>
+          <button class="cart-btn"  
+          id="cart-button-painting1"
+          data-id="painting1"
+          data-name="Tranquil Forest"
+          data-price="1299"
+          data-image="./images/painting1.png"
+          onclick="addToCart('painting1', 'Tranquil Forest', 1299, './images/painting1.png')">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="img-wrapper">
+          <img src="./images/painting2.png" alt="Painting 2" />
+        </div>
+        <h3>Color Symphony</h3>
+        <p>₹1,599</p>
+        <div class="button-container">
+            <a href="/product2.html" class="view-btn">View</a>
+            <button class="cart-btn"
+            id="cart-button-painting2"
+            data-id="painting2"
+            data-name="Color Symphony"
+            data-price="1599"
+            data-image="./images/painting2.png"
+            onclick="addToCart('painting2', 'Color Symphony', 1599, './images/painting2.png')">Add to Cart</button>
+          </div>
+      </div>
+      <div class="product-card">
+        <div class="img-wrapper">
+          <img src="./images/painting3.png" alt="Painting 3" />
+        </div>
+        <h3>Midnight Glow</h3>
+        <p>₹1,799</p>
+        <div class="button-container">
+            <a href="/product3.html" class="view-btn">View</a>
+            <button class="cart-btn" 
+            id="cart-button-painting3"
+            data-id="painting3"
+            data-name="Midnight Glow"
+            data-price="1799"
+            data-image="./images/painting3.png"
+            onclick="addToCart('painting3', 'Midnight Glow', 1799, './images/painting3.png')">Add to Cart</button>
+          </div>
+      </div>
+      <div class="product-card">
+        <div class="img-wrapper">
+          <img src="./images/painting4.png" alt="Painting 4" />
+        </div>
+        <h3>Silent Mountains</h3>
+        <p>₹1,999</p>
+        <div class="button-container">
+            <a href="/product4.html" class="view-btn">View</a>
+            <button class="cart-btn" 
+            id="cart-button-painting4"
+            data-id="painting4"
+            data-name="Silent Mountains"
+            data-price="1999"
+            data-image="./images/painting4.png"
+            onclick="addToCart('painting4', 'Silent Mountains', 1999, './images/painting4.png')">Add to Cart</button>
+          </div>
+      </div>
+      <div class="product-card">
+        <div class="img-wrapper">
+          <img src="./images/painting5.png" alt="Painting 5" />
+        </div>
+        <h3>Golden Sunset</h3>
+        <p>₹1,499</p>
+        <div class="button-container">
+            <a href="/product5.html" class="view-btn">View</a>
+            <button class="cart-btn" 
+            id="cart-button-painting5"
+            data-id="painting5"
+            data-name="Golden Sunset"
+            data-price="1499"
+            data-image="./images/painting5.png"
+            onclick="addToCart('painting5', 'Golden Sunset', 1499, './images/painting5.png')">Add to Cart</button>
+          </div>
+      </div>
+      <div class="product-card">
+        <div class="img-wrapper">
+          <img src="./images/painting6.png" alt="Painting 6" />
+        </div>
+        <h3>Ocean Breeze</h3>
+        <p>₹1,899</p>
+        <div class="button-container">
+            <a href="/product6.html" class="view-btn">View</a>
+            <button class="cart-btn" 
+            id="cart-button-painting6"
+            data-id="painting6"
+            data-name="Ocean Breeze"
+            data-price="1899"
+            data-image="./images/painting6.png"
+            onclick="addToCart('painting6', 'Ocean Breeze', 1899, './images/painting6.png')">Add to Cart</button>
+          </div>
+      </div>
+    </section>
+  </main>
+  <section class="info-section">
+    <h2>Why Choose PalleteBay?</h2>
+    <div class="info-content">
+      <div class="info-block">
+        <h3>Gallery-Grade Prints</h3>
+        <p>We use high-quality Giclée printing on acid-free canvas and paper to deliver crisp details, vibrant colors, and lasting durability. Choose your preferred medium and experience art the way it was meant to be seen.</p>
+      </div>
+      <div class="info-block">
+        <h3>Framing Your Way</h3>
+        <p>Pick from over 50 framing styles, available in 10+ sizes and multiple colors. Every piece is hand-framed in India and arrives ready to hang, so you can instantly transform your space.</p>
+      </div>
+      <div class="info-block">
+        <h3>Premium Materials, Ethically Sourced</h3>
+        <p>We carefully select the best materials from trusted global and local sources. Over 80% of our supplies are sourced within India and come with an extended 8-year warranty.</p>
+      </div>
+      <div class="info-block">
+        <h3>Simple Care Instructions</h3>
+        <p>Keep your artwork stunning by dusting with a soft cloth or brush. For frames with glass, use a mild damp cloth. Avoid chemical cleaners to protect the integrity of your print and frame.</p>
+      </div>
+      <div class="info-block">
+        <h3>Product Notes & Shipping</h3>
+        <p>Sizes are listed in inches (L x B) — to convert, use 1 inch = 2.54 cm. Natural wood frames may vary slightly in finish. We use durable acrylic glass where suitable. Orders are custom-prepared within 3 days and shipped in 5–7 business days.</p>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>301, Creative Heights, Road No. 36,Jubilee Hills, Hyderabad, Telangana - 500033</p>
+        <p>Contact No: +91 8822 866 866</p>
+        <p>WhatsApp: +919284528293</p>
+        <p>GSTIN (Tax ID): 27AACCF4436A1Z3</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Navigate</h3>
+        <a href="#">Large Paintings for Living Room</a>
+        <a href="#">Additional Information</a>
+        <a href="#">Art Categories</a>
+        <a href="#">Living Room Paintings</a>
+        <a href="#">Paintings</a>
+        <a href="#">Blog</a>
+        <a href="#">Sitemap</a>
+      </div>
+
+      <div class="footer-section">
+        <h3>Information</h3>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Grievance Officer</a>
+        <a href="#">Manufacturer/Packager/Importer</a>
+        <a href="#">Warranty & Guarantee</a>
+        <a href="#">Installation</a>
+      </div>
+
+      <div class="footer-section">
+        <h3>Customer</h3>
+        <a href="#">Create an Account</a>
+        <a href="#">Your Cart</a>
+        <a href="#">Returns & Cancellation Policy</a>
+        <a href="#">Shipping & Packaging</a>
+        <a href="#">Bulk / Corporate Orders</a>
+        <a href="#">Payment Options</a>
+        <a href="#">FAQ</a>
+      </div>
+
+      <div class="footer-section">
+        <h3>Artist/Dealer</h3>
+        <a href="#">How to sell on PalleteBay</a>
+        <a href="#">Login to your account</a>
+        <a href="#">Become a Seller</a>
+      </div>
+    </div>
+  </footer>
+  <footer>
+    <p class="copyright-text" style="text-align: center; padding: 20px 0; margin: 0;">&copy; 2025 PalleteBay. All rights reserved.</p>
+  </footer>
+  <script src="/js/home.js" defer></script>
+  <script src="/js/cartfunctions.js" ></script>
+  <script src="/js/cart.js" defer></script>
+</body>
+</html>
+
+

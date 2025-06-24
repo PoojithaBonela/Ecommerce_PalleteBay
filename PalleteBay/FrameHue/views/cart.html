@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="/css/cart.css">
+  <title>Cart | PalleteBay</title>
+</head>
+<body>
+  <header>
+    <h1>Shopping Cart</h1>
+  </header>
+
+  <div class="cart-container">
+    <div id="cart-items">
+      <!-- Cart items will be dynamically inserted here -->
+    </div>
+
+    <div class="cart-summary">
+      <div class="subtotal">
+        <span>Subtotal</span>
+        <span id="subtotal-amount">₹0.00</span>
+      </div>
+      <button id="checkout-btn" onclick="window.location.href='/checkout.html'">Proceed to Checkout</button>
+    </div>
+  </div>
+  <script src="/js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #232222;
+      color: #c5a9c1;
+      margin: 0;
+      padding: 0;
+    }
+
+    .progress-container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 600px;
+      margin: 30px auto 40px;
+      padding: 0 15px;
+      position: relative;
+    }
+
+    .progress-container::before {
+      content: '';
+      position: absolute;
+      top: 36px;
+      left: 8%;
+      width: 84%;
+      height: 4px;
+      background-color: #6a0572;
+      z-index: 0;
+      border-radius: 2px;
+    }
+
+    .step {
+      flex: 1;
+      text-align: center;
+      position: relative;
+      font-weight: 700;
+      color: #d78bbf;
+      z-index: 1;
+      user-select: none;
+    }
+
+    .step .circle {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-color: #6a0572;
+      color: white;
+      line-height: 32px;
+      font-size: 20px;
+      margin-bottom: 8px;
+      position: relative;
+      box-shadow: 0 0 6px #6a0572aa;
+    }
+
+    .step.completed .circle::after {
+      content: "✓";
+      position: absolute;
+      top: 2px;
+      left: 9px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .step.completed {
+      color: #f4b1e0;
+    }
+
+    .step.active {
+      color: #f9c0ff;
+    }
+
+    .step.active .circle {
+      background-color: #9b33cc;
+      box-shadow: 0 0 12px #9b33ccaa;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto 50px;
+      background-color: #1e1713;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 30px #46134a99;
+      color: #f3c5f5;
+    }
+
+    .payment-option {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      margin: 10px 0;
+      background-color: #1c1b1b;;
+      border: 2px solid #6a0572;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .payment-option:hover {
+      border-color: #9b33cc;
+      background-color: #2e2828;
+    }
+
+    .payment-option input[type="radio"] {
+      margin-right: 15px;
+    }
+
+    .payment-option label {
+      color: #f4b1e0;
+      cursor: pointer;
+    }
+
+    .pay-button {
+      display: none;
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      background-color: #6a0572;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .pay-button:hover {
+      background-color: #9b33cc;
+    }
+
+    #googlePayButton {
+      display: none;
+      margin-top: 20px;
+      background-color: #6a0572;
+      color: white;
+      border: none;
+      padding: 14px 0;
+      font-size: 20px;
+      font-weight: 700;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 15px #6a057299;
+      transition: background-color 0.3s ease;
+    }
+
+    #googlePayButton:hover {
+      background-color: #9b33cc;
+      box-shadow: 0 0 25px #9b33cccc;
+    }
+
+    @media(max-width: 640px) {
+      form {
+        padding: 25px 20px;
+      }
+
+      .progress-container {
+        max-width: 90vw;
+        padding: 0 5vw;
+      }
+    }
+
+    .dropdown-section {
+      margin-top: 30px;
+    }
+
+    .dropdown-button {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      background-color: #1c1b1b;
+      color: #f4b1e0;
+      border: 2px solid #6a0572;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      text-align: left;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .dropdown-button:after {
+      content: '▼';
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .dropdown-button:hover {
+      border-color: #9b33cc;
+      background-color: #362929;
+    }
+
+    .dropdown-content {
+      display: none;
+      padding: 15px;
+      margin: 0 0 15px 0;
+      background-color: #1e1713;
+      border: 1px solid #6a0572;
+      border-top: none;
+      border-radius: 0 0 8px 8px;
+    }
+
+    .dropdown-content.active {
+      display: block;
+    }

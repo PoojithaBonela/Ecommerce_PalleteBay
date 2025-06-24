@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/css/checkout.css">
+  <title>Checkout - Address</title>
+</head>
+<body>
+
+  <!-- Progress bar -->
+  <div class="progress-container" aria-label="Checkout progress">
+    <div class="step completed" aria-current="step">
+      <div class="circle"></div>
+      <div>Cart</div>
+    </div>
+    <div class="step active">
+      <div class="circle">2</div>
+      <div>Address</div>
+    </div>
+    <div class="step">
+      <div class="circle">3</div>
+      <div>Payment</div>
+    </div>
+  </div>
+
+  <!-- Checkout Address Form -->
+  <form id="addressForm" aria-label="Shipping address form" novalidate>
+    <label for="country">Country / Region</label>
+    <select id="country" name="country" required onchange="updateStateOptions()">
+      <option value="" disabled selected>Select country</option>
+      <option value="India">India</option>
+      <option value="USA">USA</option>
+      <option value="UK">United Kingdom</option>
+    </select>
+
+    <label for="fullname">Full name (First and Last name)</label>
+    <input type="text" id="fullname" name="fullname" required placeholder="John Doe" />
+
+    <label for="mobile">Mobile number</label>
+    <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required placeholder="10-digit mobile number" />
+
+    <label for="pincode">Pincode (6 digits)</label>
+    <input type="text" id="pincode" name="pincode" pattern="\d{6}" maxlength="6" required placeholder="e.g. 560001" />
+
+    <label for="flat">Flat, House no., Building, Company, Apartment</label>
+    <input type="text" id="flat" name="flat" required placeholder="Flat or house no." />
+
+    <label for="area">Area, Street, Sector, Village</label>
+    <input type="text" id="area" name="area" required placeholder="Area or street" />
+
+    <label for="landmark">Landmark</label>
+    <input type="text" id="landmark" name="landmark" placeholder="Near park, mall, etc. (optional)" />
+
+    <label for="city">Town / City</label>
+    <input type="text" id="city" name="city" required placeholder="City name" />
+
+    <label for="state">State</label>
+    <select id="state" name="state" required>
+      <option value="" disabled selected>Choose a state</option>
+      <!-- Options will be added by JavaScript -->
+    </select>
+
+    <button type="submit">Save Address</button>
+  </form>
+
+  <!-- New wrapper for saved addresses -->
+  <div class="saved-addresses-wrapper">
+    <div id="savedAddressesContainer" style="display: none;">
+      <h2>Your Saved Addresses</h2>
+      <div id="addressesList"></div>
+      <button id="addNewAddressButton">Add New Address</button>
+    </div>
+  </div>
+  <script src="/js/checkout.js"></script>
+</body>
+</html>

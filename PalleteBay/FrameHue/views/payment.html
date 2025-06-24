@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/css/payment.css">
+  <title>Checkout - Payment</title>
+</head>
+<body>
+  <!-- Progress bar -->
+  <div class="progress-container" aria-label="Checkout progress">
+    <div class="step completed">
+      <div class="circle"></div>
+      <div>Cart</div>
+    </div>
+    <div class="step completed">
+      <div class="circle"></div>
+      <div>Address</div>
+    </div>
+    <div class="step active">
+      <div class="circle">3</div>
+      <div>Payment</div>
+    </div>
+  </div>
+
+  <!-- Payment Form -->
+  <form id="paymentForm" aria-label="Payment method selection form">
+    <h3>Recommended Payment Options</h3>
+    
+    <div class="payment-option">
+      <input type="radio" id="recommendedGooglePay" name="paymentMethod" value="googlePay">
+      <label for="recommendedGooglePay">Google Pay</label>
+    </div>
+
+    <button type="button" class="pay-button" id="recommendedPayButton" style="display: none;">Pay Now with Google Pay</button>
+
+    <div class="dropdown-section">
+      <h3>Online Payment Options</h3>
+      
+      <!-- UPI Dropdown -->
+      <button type="button" class="dropdown-button" data-target="upiDropdown">UPI</button>
+      <div id="upiDropdown" class="dropdown-content">
+        <div class="payment-option">
+          <input type="radio" id="googlePayUPI" name="paymentMethod" value="googlePay">
+          <label for="googlePayUPI">Google Pay</label>
+        </div>
+        <div class="payment-option">
+          <input type="radio" id="generalUPI" name="paymentMethod" value="upi">
+          <label for="generalUPI">UPI</label>
+        </div>
+        <button type="button" class="pay-button" id="upiPayButton">Pay Now</button>
+      </div>
+
+      <!-- Credit/Debit Card Dropdown -->
+      <button type="button" class="dropdown-button" data-target="cardDropdown">Credit/Debit Card</button>
+      <div id="cardDropdown" class="dropdown-content">
+        <div class="payment-option">
+          <input type="radio" id="iciciCard" name="paymentMethod" value="iciciCard">
+          <label for="iciciCard">ICICI Credit/Debit Card</label>
+        </div>
+        <div class="payment-option">
+          <input type="radio" id="kotakCard" name="paymentMethod" value="kotakCard">
+          <label for="kotakCard">Kotak Credit/Debit Card</label>
+        </div>
+        <button type="button" class="pay-button" id="cardPayButton">Pay Now</button>
+      </div>
+
+      <!-- Pay Later Dropdown -->
+      <button type="button" class="dropdown-button" data-target="payLaterDropdown">Pay Later</button>
+      <div id="payLaterDropdown" class="dropdown-content">
+        <div class="payment-option">
+          <input type="radio" id="simplPay" name="paymentMethod" value="simplPay">
+          <label for="simplPay">Simpl</label>
+        </div>
+        <div class="payment-option">
+          <input type="radio" id="lazyPay" name="paymentMethod" value="lazyPay">
+          <label for="lazyPay">LazyPay</label>
+        </div>
+        <button type="button" class="pay-button" id="payLaterButton">Pay Now</button>
+      </div>
+
+      <!-- Wallets Dropdown -->
+      <button type="button" class="dropdown-button" data-target="walletsDropdown">Wallets</button>
+      <div id="walletsDropdown" class="dropdown-content">
+        <div class="payment-option">
+          <input type="radio" id="mobikwik" name="paymentMethod" value="mobikwik">
+          <label for="mobikwik">Mobikwik</label>
+        </div>
+        <div class="payment-option">
+          <input type="radio" id="airtelBank" name="paymentMethod" value="airtelBank">
+          <label for="airtelBank">Airtel Payments Bank</label>
+        </div>
+        <button type="button" class="pay-button" id="walletsButton">Pay Now</button>
+      </div>
+
+      <!-- EMI Dropdown -->
+      <button type="button" class="dropdown-button" data-target="emiDropdown">EMI</button>
+      <div id="emiDropdown" class="dropdown-content">
+        <div class="payment-option">
+          <input type="radio" id="iciciEmi" name="paymentMethod" value="iciciEmi">
+          <label for="iciciEmi">ICICI Card EMI</label>
+        </div>
+        <div class="payment-option">
+          <input type="radio" id="kotakEmi" name="paymentMethod" value="kotakEmi">
+          <label for="kotakEmi">Kotak Card EMI</label>
+        </div>
+        <button type="button" class="pay-button" id="emiButton">Pay Now</button>
+      </div>
+
+      <!-- Net Banking Dropdown -->
+      <button type="button" class="dropdown-button" data-target="netBankingDropdown">Net Banking</button>
+      <div id="netBankingDropdown" class="dropdown-content">
+        <div class="payment-option">
+          <input type="radio" id="axisBank" name="paymentMethod" value="axisBank">
+          <label for="axisBank">Axis Bank</label>
+        </div>
+        <div class="payment-option">
+          <input type="radio" id="iciciBank" name="paymentMethod" value="iciciBank">
+          <label for="iciciBank">ICICI Bank</label>
+        </div>
+        <div class="payment-option">
+          <input type="radio" id="sbiBank" name="paymentMethod" value="sbiBank">
+          <label for="sbiBank">SBI</label>
+        </div>
+        <button type="button" class="pay-button" id="netBankingButton">Pay Now</button>
+      </div>
+    </div>
+    <div class="payment-section">
+      <h3>Pay on Delivery</h3>
+      <div class="payment-option">
+        <input type="radio" id="cashOnDelivery" name="paymentMethod" value="cod">
+        <label for="cashOnDelivery">Cash on Delivery</label>
+      </div>
+      <button type="button" class="pay-button" id="codButton" style="display: none;">Pay on Delivery</button>
+    </div>
+  </form>
+<script src="/js/payment.js"></script>
+</body>
+</html>

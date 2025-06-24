@@ -1,0 +1,277 @@
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #232222;
+      color: #e0a8d9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .progress-container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 600px;
+      margin: 30px auto 40px;
+      padding: 0 15px;
+      position: relative;
+    }
+
+    .progress-container::before {
+      content: '';
+      position: absolute;
+      top: 36px;
+      left: 8%;
+      width: 84%;
+      height: 4px;
+      background-color: #6a0572;
+      z-index: 0;
+      border-radius: 2px;
+    }
+
+    .step {
+      flex: 1;
+      text-align: center;
+      position: relative;
+      font-weight: 700;
+      color: #d78bbf;
+      z-index: 1;
+      user-select: none;
+    }
+
+    .step .circle {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-color: #6a0572;
+      color: white;
+      line-height: 32px;
+      font-size: 20px;
+      margin-bottom: 8px;
+      position: relative;
+      box-shadow: 0 0 6px #6a0572aa;
+    }
+
+    .step.completed .circle::after {
+      content: "✓";
+      position: absolute;
+      top: 2px;
+      left: 9px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .step.completed {
+      color: #f4b1e0;
+    }
+
+    .step.active {
+      color: #f9c0ff;
+    }
+
+    .step.active .circle {
+      background-color: #9b33cc;
+      box-shadow: 0 0 12px #9b33ccaa;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto 50px;
+      background-color: #1e1713;;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 30px #46134a99;
+      color: #f3c5f5;
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: 600;
+      font-size: 16px;
+      color: #f4b1e0;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px 14px;
+      margin-top: 8px;
+      box-sizing: border-box;
+      font-size: 16px;
+      font-weight: 500;
+      color: #fff;
+      background-color: #1c1b1b;
+      border: 2px solid #6a0572;
+      border-radius: 6px;
+      transition: border-color 0.3s ease;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #a79999cc;
+      font-style: italic;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #9b33cc;
+      box-shadow: 0 0 10px #9b33cccc;
+      background-color: #4a1d53;
+      color: #fff;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 70px;
+    }
+
+    button {
+      margin-top: 30px;
+      background-color: #6a0572;
+      color: white;
+      border: none;
+      padding: 14px 0;
+      font-size: 20px;
+      font-weight: 700;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 15px #6a057299;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #9b33cc;
+      box-shadow: 0 0 25px #9b33cccc;
+    }
+
+    .address-actions button {
+        width: auto;
+        padding: 8px 15px;
+        margin-right: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        box-shadow: none;
+        transition: background-color 0.2s ease;
+    }
+
+    .address-actions .remove-address-button {
+        background-color: #6a0572; /* Changed to match primary button color */
+    }
+
+    .address-actions .remove-address-button:hover {
+        background-color: #9b33cc; /* Changed to match primary button hover */
+    }
+
+    .saved-address-item {
+        background: #f9f9f9; /* Light background like order-item */
+        border: 1px solid #ddd; /* Border like order-item */
+        border-radius: 5px; /* Slightly less rounded corners */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        padding: 15px; /* Adjusted padding */
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .saved-address-item p {
+        margin: 5px 0;
+        color: #666; /* Adjusted text color */
+    }
+
+    .saved-address-item strong {
+        color: #f4b1e0; /* Light pink color */
+    }
+
+    #savedAddressesContainer h2 {
+        color: #f3c5f5; /* Keep heading color consistent with checkout form */
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #addNewAddressButton {
+        width: auto;
+        padding: 10px 20px;
+        font-size: 16px;
+        margin-top: 20px;
+        display: block;
+        margin-left: 0; /* Align to the left */
+        margin-right: auto;
+        max-width: 200px;
+    }
+
+    /* New styles for the wrapper and container */
+    .saved-addresses-wrapper {
+      max-width: 1000px; /* Matches cart-container max-width */
+      margin: 40px auto; /* Matches cart-container margin */
+      padding: 0 20px; /* Matches cart-container padding */
+    }
+
+    #savedAddressesContainer {
+      background: #fff; /* Matches cart-items background */
+      border-radius: 10px; /* Matches cart-items border-radius */
+      box-shadow: 0 0 10px rgba(0,0,0,0.08); /* Matches cart-items box-shadow */
+      padding: 20px; /* Matches cart-items padding */
+      margin-bottom: 30px; /* Matches cart-items margin-bottom */
+    }
+
+    @media(max-width: 640px) {
+      form {
+        padding: 25px 20px;
+      }
+
+      .progress-container {
+        max-width: 90vw;
+        padding: 0 5vw;
+      }
+    }
+        .saved-addresses-wrapper h2 {
+            color: #f3c5f5; /* Match the desired heading color */
+            text-align: center;
+            margin-bottom: 10px; /* Add some space below the heading */
+            padding-bottom: 10px; /* Add padding for the line */
+            border-bottom: 1px solid white; /* White line after the heading */
+        }
+
+        #addressesList {
+            
+            justify-content: flex-start;
+            padding-top: 20px;
+            /* Ensure no background or padding on the list container itself */
+            background: none;
+            box-shadow: none;
+            border-radius: 0;
+            padding: 0;
+        }
+
+        .address-item {
+            background-color: #1c1b1b;
+            border: 1px solid white;
+            border-radius: 8px;
+            padding: 15px;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            padding-bottom: 40px;
+            margin-bottom: 20px;
+            color: #f3c5f5;
+            border-bottom: 1px solid white; /* Apply white line to all address items */
+            padding-bottom: 19px; /* Adjust padding to accommodate the line */
+        }
+
+        .address-item p,
+        .address-item strong {
+            color: #f3c5f5;
+        }
+
+        /* Remove the border from the last address item */
+        .address-item:last-of-type {
+            border-bottom: none;
+            padding-bottom: 15px; /* Reset padding for the last item */
+        }
+
+        /* Remove the specific border-bottom from first-of-type as it's now handled by .address-item */
+      
+        /* Remove the pseudo-element as border and margin handle separation */
+        .address-item:not(:last-child)::after {
+            display: none;
+        }
+    
