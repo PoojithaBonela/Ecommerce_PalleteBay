@@ -116,7 +116,7 @@ npm start
 🏠 Homepage
 Clean landing section displaying paintings and promotions.
 ![Homepage](screenshots/homepage1.png)
-![Homepage](screenshots/home2.png)
-![Homepage](screenshots/home3.png)
+![Homepage](screenshots/Home2.png)
+![Homepage](screenshots/Home3.png)
 
 
