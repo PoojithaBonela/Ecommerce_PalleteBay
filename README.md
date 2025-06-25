@@ -70,7 +70,7 @@ Root-Level Backend Files:
 * `user.js`
   Manages user schema (if used separately from `auth.js`) or supports user-related DB logic
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 🚀 Getting Started - How to start the project?
 
@@ -84,12 +84,14 @@ cd Ecommerce_PalleteBay-master
 ```
 npm install
 ```
+3. Install Node.js (Required)
+Make sure Node.js (v14 or above) is installed on your system.
 
-3. Make Sure MongoDB Is Running:
+4. Make Sure MongoDB Is Running:
 * Either install MongoDB locally or use MongoDB Atlas (cloud database).
 * The app connects to `mongodb://localhost:27017/framehue` by default, and uses real Google OAuth Credentials for testing purposes only, you're good to go with .env.demo.
 
-4. If you want to use your own MongoDB and Google OAuth credentials Update `.env.demo`:
+5. If you want to use your own MongoDB and Google OAuth credentials Update `.env.demo`:
 * Open `.env.demo`
 * Replace the values with your own:
 ```
@@ -100,7 +102,7 @@ GOOGLE_CLIENT_SECRET=your_google_client_secret
 GOOGLE_CALLBACK_URL=http://localhost:3000/auth/google/callback
 ```
 
-5. Run the Server:
+6. Run the Server:
 ```
 node server.js
 ```
@@ -109,12 +111,13 @@ or if using `npm start` in `package.json`:
 npm start
 ```
 
-6. Open the App:
+7. Open the App:
    Visit `http://localhost:3000` in your browser.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 📌 Features
 🏠 Homepage
 Clean landing section displaying paintings and promotions.
+
 ![Homepage](screenshots/homepage1.png)
 ![Homepage](screenshots/Home2.png)
 ![Homepage](screenshots/Home3.png)
@@ -123,6 +126,7 @@ Clean landing section displaying paintings and promotions.
 
 🔐 Login with Google  
 Secure login via Google OAuth using Passport.js.  
+
 ![Login Page](screenshots/login.png)  
 ![Google Account Selector](screenshots/google%20screen.png)
 
@@ -130,24 +134,28 @@ Secure login via Google OAuth using Passport.js.
 
 🛍️ Product Gallery  
 Visually rich product cards with quick access to details.  
+
 ![Product Gallery](screenshots/gallery.png)
 
 -------------------------------------------------------------
 
 📦 Product Detail Page  
 Each product has a dedicated page with detailed description and “Add to Cart” functionality.  
+
 ![Product Details](screenshots/Productdetailspage.png)
 
 -------------------------------------------------------------
 
 🛒 Shopping Cart  
 Displays products added to cart, with price and quantity.  
+
 ![Shopping Cart](screenshots/shoppingcart.png)
 
 -------------------------------------------------------------
 
 🏁 Checkout Flow  
 Includes add address → address selection → payment → order confirmation.  
+
 ![Checkout - Address Form](screenshots/address.png)  
 ![Saved Addresses](screenshots/savedaddress.png)  
 ![Payment Page](screenshots/payment.png)
@@ -157,6 +165,7 @@ Includes add address → address selection → payment → order confirmation.
 
 📋 Order History  
 Users can view their past orders and details.  
+
 ![Your Orders](screenshots/orders.png)
 
 
