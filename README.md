@@ -76,7 +76,7 @@ Root-Level Backend Files:
 
 1. Download the zip file or Clone the Repository:
 ```
-git clone https://github.com/your-username/Ecommerce_PalleteBay.git
+git clone https://github.com/PoojithaBonela/Ecommerce_PalleteBay.git
 cd Ecommerce_PalleteBay-master
 ```
 
