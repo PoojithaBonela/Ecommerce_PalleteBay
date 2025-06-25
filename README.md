@@ -113,5 +113,10 @@ npm start
    Visit `http://localhost:3000` in your browser.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 📌 Features
+🏠 Homepage
+Clean landing section displaying paintings and promotions.
+![Homepage](screenshots/homepage1.png)
+![Homepage](screenshots/home2.png)
+![Homepage](screenshots/home3.png)
 
 
