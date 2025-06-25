@@ -42,7 +42,7 @@ const Order = require('./PalleteBay/FrameHue/backend/models/order.js');
 const Address = require('./PalleteBay/FrameHue/backend/models/address.js');
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost:27017/framehue', {
+mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/framehue', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
