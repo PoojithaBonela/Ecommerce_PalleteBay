@@ -119,4 +119,33 @@ Clean landing section displaying paintings and promotions.
 ![Homepage](screenshots/Home2.png)
 ![Homepage](screenshots/Home3.png)
 
+🔐 Login with Google  
+Secure login via Google OAuth using Passport.js.  
+![Login Page](screenshots/login.png)  
+![Google Account Selector](screenshots/google%20screen.png)
+
+🛍️ Product Gallery  
+Visually rich product cards with quick access to details.  
+![Product Gallery](screenshots/gallery.png)
+
+📦 Product Detail Page  
+Each product has a dedicated page with detailed description and “Add to Cart” functionality.  
+![Product Details](screenshots/Productdetailspage.png)
+
+🛒 Shopping Cart  
+Displays products added to cart, with price and quantity.  
+![Shopping Cart](screenshots/shoppingcart.png)
+
+🏁 Checkout Flow  
+Includes add address → address selection → payment → order confirmation.  
+![Checkout - Address Form](screenshots/address.png)  
+![Saved Addresses](screenshots/savedaddress.png)  
+![Payment Page](screenshots/payment.png)
+![Order Sucess Page](screenshots/order.png)
+
+📋 Order History  
+Users can view their past orders and details.  
+![Your Orders](screenshots/orders.png)
+
+
 
